@@ -1,0 +1,7 @@
+include ':user-profile-sdk-builder-common',
+        ':user-profile-sdk-builder-dev',
+        ':user-profile-sdk-builder-prod',
+        ':user-profile-sdk-common',
+        ':user-profile-sdk-core',
+        ':user-profile-sdk-sample-app',
+        ':user-profile-sdk-ui'

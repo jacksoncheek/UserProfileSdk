@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+import com.jacksoncheek.gradle.Libs
+import com.jacksoncheek.gradle.Projects
+import com.jacksoncheek.gradle.TestLibs
+import com.jacksoncheek.gradle.Versions
+
+android {
+    compileSdkVersion Versions.compileSdk
+    buildToolsVersion Versions.buildTools
+
+    defaultConfig {
+        multiDexEnabled true
+
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Versions.versionCode
+        versionName Versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(Projects.common)
+    implementation project(Projects.core)
+
+    implementation Libs.kotlin
+    implementation Libs.kotlinCoroutines
+    implementation Libs.kotlinCoroutinesAndroid
+    implementation Libs.supportAppCompat
+    implementation Libs.supportConstraintLayout
+
+    implementation Libs.archComponentViewModel
+    implementation Libs.archComponentLifecycleExtensions
+
+    implementation Libs.okHttp3
+    implementation Libs.okHttp3LoggingInterceptor
+
+    implementation Libs.glide
+
+    testImplementation TestLibs.jUnit
+    testImplementation TestLibs.assertJCore
+    testImplementation TestLibs.mockito
+    testImplementation TestLibs.mockitoKotlin
+    testImplementation TestLibs.mockitoInline
+
+    androidTestImplementation TestLibs.androidTestRunner
+    androidTestImplementation TestLibs.espresso
+}
