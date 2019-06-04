@@ -16,7 +16,7 @@
 
     <!-- Button Colors -->
     <color name="sdk_color_button_disabled_background">@color/sdk_color_primary_light</color>
-    <color name="sdk_color_button_enabled_background">@color/sdk_color_secondary_dark</color>
+    <color name="sdk_color_button_enabled_background">@color/sdk_color_secondary</color>
 
     <!-- Material Design Colors -->
 

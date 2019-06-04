@@ -78,7 +78,7 @@ class UserProfileActivity : AppCompatActivity() {
 
         private val userDob = activity.findViewById<TextView>(R.id.user_dob)
 
-        private val okButton = activity.findViewById<Button>(R.id.user_got_it_button)
+        private val gotItButton = activity.findViewById<Button>(R.id.user_got_it_button)
 
         private val progressBar = activity.findViewById<ProgressBar>(R.id.user_progress_bar)
 
@@ -105,7 +105,6 @@ class UserProfileActivity : AppCompatActivity() {
             userCountry.visibility = screenVisibility
             userPhone.visibility = screenVisibility
             userDob.visibility = screenVisibility
-            okButton.visibility = screenVisibility
         }
 
         @SuppressLint("SetTextI18n")
@@ -132,7 +131,7 @@ class UserProfileActivity : AppCompatActivity() {
         }
 
         override fun enableOkButton(enable: Boolean) {
-            okButton.isEnabled = enable
+            gotItButton.isEnabled = enable
         }
 
         private var listener: ((UserProfileViewModel.Intention) -> Unit)? = null
@@ -143,13 +142,13 @@ class UserProfileActivity : AppCompatActivity() {
         }
 
         private fun setUpListeners() {
-            okButton.setOnClickListener {
+            gotItButton.setOnClickListener {
                 notify(UserProfileViewModel.Intention.UserClickedOk)
             }
         }
 
         private fun removeListeners() {
-            okButton.setOnClickListener(null)
+            gotItButton.setOnClickListener(null)
         }
     }
 
