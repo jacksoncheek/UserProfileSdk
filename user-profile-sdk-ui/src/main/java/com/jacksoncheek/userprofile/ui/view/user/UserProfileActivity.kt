@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.RelativeLayout
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.jacksoncheek.userprofile.core.data.model.User
@@ -63,6 +64,8 @@ class UserProfileActivity : AppCompatActivity() {
 
         private val userImage = activity.findViewById<ImageView>(R.id.user_image)
 
+        private val userImageHolder = activity.findViewById<RelativeLayout>(R.id.user_image_holder)
+
         private val userName = activity.findViewById<TextView>(R.id.user_name)
 
         private val userGender = activity.findViewById<TextView>(R.id.user_gender)
@@ -96,6 +99,7 @@ class UserProfileActivity : AppCompatActivity() {
             progressBar.visibility = loadingVisibility
 
             userImage.visibility = screenVisibility
+            userImageHolder.visibility = screenVisibility
             userName.visibility = screenVisibility
             userGender.visibility = screenVisibility
             userCountry.visibility = screenVisibility
