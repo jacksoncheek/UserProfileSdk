@@ -71,12 +71,12 @@
             app:layout_constraintTop_toBottomOf="@id/user_email" />
 
     <Button
-            android:id="@+id/user_ok_button"
+            android:id="@+id/user_got_it_button"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
             android:layout_margin="16dp"
             android:enabled="false"
-            android:text="@string/user_ok"
+            android:text="@string/user_got_it"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />

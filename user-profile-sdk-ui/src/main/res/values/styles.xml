@@ -1,0 +1,66 @@
+<resources>
+
+    <!-- Application Themes -->
+    <style name="UserProfileSdk" />
+
+    <style name="UserProfileSdk.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/sdk_color_primary</item>
+        <item name="colorPrimaryDark">@color/sdk_color_primary_dark</item>
+        <item name="colorAccent">@color/sdk_color_secondary</item>
+
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="fontFamily">@font/lato_regular</item>
+
+        <item name="android:textViewStyle">@style/UserProfileSdk.Text.Body</item>
+        <item name="android:buttonStyle">@style/UserProfileSdk.Button</item>
+    </style>
+
+    <!-- TextView Styles -->
+    <style name="UserProfileSdk.Text" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/sdk_color_primary_text</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Body">
+        <item name="android:textSize">@dimen/sdk_default_textview_text_size</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Body.Bold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Body.Light">
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="fontFamily">@font/lato_light</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Small">
+        <item name="android:textSize">@dimen/sdk_default_textview_small_text_size</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Title">
+        <item name="android:textSize">@dimen/sdk_default_textview_title_text_size</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Title.Bold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="UserProfileSdk.Text.Title.Light">
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="fontFamily">@font/lato_light</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="UserProfileSdk.Button" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/sdk_default_button_text_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">sdk_color_primary_text</item>
+        <item name="android:layout_height">@dimen/sdk_default_button_height</item>
+        <item name="android:elevation">@dimen/sdk_default_button_elevation</item>
+    </style>
+
+</resources>

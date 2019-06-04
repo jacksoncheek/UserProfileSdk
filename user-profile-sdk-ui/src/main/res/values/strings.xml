@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">UserProfileSdkUi</string>
-    <string name="user_ok">OK</string>
+    <string name="app_name">User Profile</string>
+
+    <string name="user_got_it">Got It!</string>
 </resources>

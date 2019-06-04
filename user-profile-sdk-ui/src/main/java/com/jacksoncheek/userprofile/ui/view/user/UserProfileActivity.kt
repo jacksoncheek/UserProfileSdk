@@ -75,7 +75,7 @@ class UserProfileActivity : AppCompatActivity() {
 
         private val userDob = activity.findViewById<TextView>(R.id.user_dob)
 
-        private val okButton = activity.findViewById<Button>(R.id.user_ok_button)
+        private val okButton = activity.findViewById<Button>(R.id.user_got_it_button)
 
         private val progressBar = activity.findViewById<ProgressBar>(R.id.user_progress_bar)
 
