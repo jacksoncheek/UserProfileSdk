@@ -4,6 +4,7 @@
     <application android:supportsRtl="true">
         <activity
                 android:name="com.jacksoncheek.userprofile.ui.view.user.UserProfileActivity"
+                android:theme="@style/UserProfileSdk.AppTheme"
                 android:screenOrientation="portrait" />
     </application>
 </manifest>

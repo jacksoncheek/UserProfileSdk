@@ -56,7 +56,7 @@
     <!-- TextViews -->
     <dimen name="sdk_default_textview_text_size">16sp</dimen>
     <dimen name="sdk_default_textview_small_text_size">12sp</dimen>
-    <dimen name="sdk_default_textview_title_text_size">20sp</dimen>
+    <dimen name="sdk_default_textview_title_text_size">56sp</dimen>
 
     <!-- Buttons -->
     <dimen name="sdk_default_button_text_size">16sp</dimen>

@@ -5,76 +5,84 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/sdk_color_primary"
         tools:context=".view.user.UserProfileActivity">
 
     <ImageView
             android:id="@+id/user_image"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="@dimen/sdk_seven"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
             android:id="@+id/user_name"
+            style="@style/UserProfileSdk.Text.Title.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/sdk_standard_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_image" />
 
     <TextView
             android:id="@+id/user_gender"
+            style="@style/UserProfileSdk.Text.Body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/sdk_one"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_name" />
 
     <TextView
             android:id="@+id/user_country"
+            style="@style/UserProfileSdk.Text.Body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/sdk_one"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_gender" />
 
     <TextView
             android:id="@+id/user_phone"
+            style="@style/UserProfileSdk.Text.Body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/sdk_one"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_country" />
 
     <TextView
             android:id="@+id/user_email"
+            style="@style/UserProfileSdk.Text.Body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/sdk_one"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_phone" />
 
     <TextView
             android:id="@+id/user_dob"
+            style="@style/UserProfileSdk.Text.Body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/sdk_one"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/user_email" />
 
     <Button
             android:id="@+id/user_got_it_button"
+            style="@style/UserProfileSdk.Button"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:layout_margin="16dp"
+            android:layout_height="@dimen/sdk_default_button_height"
+            android:layout_margin="@dimen/sdk_standard_margin"
             android:enabled="false"
             android:text="@string/user_got_it"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,8 +91,8 @@
 
     <ProgressBar
             android:id="@+id/user_progress_bar"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="@dimen/sdk_eight"
+            android:layout_height="@dimen/sdk_eight"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

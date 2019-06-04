@@ -58,7 +58,7 @@
         <item name="fontFamily">@font/lato_bold</item>
         <item name="android:textSize">@dimen/sdk_default_button_text_size</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">sdk_color_primary_text</item>
+        <item name="android:textColor">@color/sdk_color_primary_text</item>
         <item name="android:layout_height">@dimen/sdk_default_button_height</item>
         <item name="android:elevation">@dimen/sdk_default_button_elevation</item>
     </style>
