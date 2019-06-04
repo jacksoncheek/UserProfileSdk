@@ -2,7 +2,6 @@ package com.jacksoncheek.userprofile.ui.view.user
 
 import android.arch.lifecycle.ViewModel
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import com.jacksoncheek.userprofile.common.result.UserProfileSdkResult
 import com.jacksoncheek.userprofile.core.data.UserProfileSdkCore
 import com.jacksoncheek.userprofile.common.internal.logic.Result

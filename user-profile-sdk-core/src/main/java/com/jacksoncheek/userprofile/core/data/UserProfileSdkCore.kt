@@ -32,7 +32,7 @@ interface UserProfileSdkCore {
 
     val networkStack: NetworkStack
 
-    // No UI - just networking + data.
+    // No UI - just networking + data
     suspend fun getUser(): Result<User>
 
     private class Impl(private val params: Params) :

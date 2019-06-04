@@ -137,6 +137,7 @@ class UserProfileActivity : AppCompatActivity() {
         private inline fun notify(intention: UserProfileViewModel.Intention) {
             listener?.invoke(intention)
         }
+
         private fun setUpListeners() {
             okButton.setOnClickListener {
                 notify(UserProfileViewModel.Intention.UserClickedOk)

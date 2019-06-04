@@ -64,5 +64,4 @@ class Coordinator(
             val activity: AppCompatActivity
         ) : Intention()
     }
-
 }

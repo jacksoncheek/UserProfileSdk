@@ -22,7 +22,6 @@ class UserRemoteImpl(
             Result.Unexpected(e.localizedMessage)
         }
     }
-
 }
 
 fun <T : Any> Response<T>.getResult(): Result<T> =

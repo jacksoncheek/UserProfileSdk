@@ -1,7 +1,6 @@
 package com.jacksoncheek.userprofile.builder.dev
 
 import android.content.Context
-import android.text.PrecomputedText
 import com.jacksoncheek.userprofile.builder.UserProfileSdk
 import com.jacksoncheek.userprofile.builder.internal.UserProfileSdkImpl
 import com.jacksoncheek.userprofile.common.internal.logic.Logger

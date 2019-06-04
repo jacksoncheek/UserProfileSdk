@@ -83,5 +83,4 @@ class Navigator(
             val deferred: CompletableDeferred<Result<AppCompatActivity>> = CompletableDeferred()
         ) : Intention()
     }
-
 }
