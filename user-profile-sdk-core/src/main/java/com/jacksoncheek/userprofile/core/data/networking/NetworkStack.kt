@@ -29,7 +29,7 @@ class NetworkStack private constructor(
 
     val AMOUNT: String = "1"
 
-    val MAX_LENGTH: String = "25"
+    val MAX_LENGTH: String = "12"
 
     val EXTRA: String = "true"
 

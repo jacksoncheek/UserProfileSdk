@@ -78,6 +78,8 @@ class UserProfileActivity : AppCompatActivity() {
 
         private val userDob = activity.findViewById<TextView>(R.id.user_dob)
 
+        private val userInfoHolder = activity.findViewById<RelativeLayout>(R.id.user_info_holder)
+
         private val gotItButton = activity.findViewById<Button>(R.id.user_got_it_button)
 
         private val progressBar = activity.findViewById<ProgressBar>(R.id.user_progress_bar)
@@ -98,13 +100,9 @@ class UserProfileActivity : AppCompatActivity() {
 
             progressBar.visibility = loadingVisibility
 
-            userImage.visibility = screenVisibility
             userImageHolder.visibility = screenVisibility
             userName.visibility = screenVisibility
-            userGender.visibility = screenVisibility
-            userCountry.visibility = screenVisibility
-            userPhone.visibility = screenVisibility
-            userDob.visibility = screenVisibility
+            userInfoHolder.visibility = screenVisibility
         }
 
         @SuppressLint("SetTextI18n")
@@ -122,7 +120,7 @@ class UserProfileActivity : AppCompatActivity() {
                     .into(userImage)
 
                 userName.text = "${user.name} ${user.surname}"
-                userGender.text = user.gender
+                userGender.text = user.gender.capitalize()
                 userCountry.text = user.region
                 userPhone.text = user.phone
                 userEmail.text = user.email
