@@ -36,6 +36,7 @@ android {
     productFlavors {
         dev {
             dimension "CONFIGURABLE"
+            applicationIdSuffix ".dev"
         }
 
         prod {
@@ -47,6 +48,9 @@ android {
 // Dev Dependencies
 dependencies {
     devImplementation project(Projects.builderDev)
+    devImplementation(Libs.chuck) {
+        exclude group: 'com.android.support', module: 'design'
+    }
 }
 
 // Prod Dependencies
@@ -65,9 +69,6 @@ dependencies {
 
     implementation Libs.okHttp3
     implementation Libs.okHttp3LoggingInterceptor
-    implementation(Libs.chuck) {
-        exclude group: 'com.android.support', module: 'design'
-    }
 
     testImplementation TestLibs.jUnit
     testImplementation TestLibs.assertJCore
