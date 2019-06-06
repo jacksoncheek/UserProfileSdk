@@ -4,9 +4,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.jacksoncheek.userprofile.common.typealiases.UserName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job

@@ -9,7 +9,6 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.actor
-import kotlinx.coroutines.launch
 
 class MainViewModel(
     val scope: CoroutineScope,
@@ -24,12 +23,10 @@ class MainViewModel(
         for (intention in channel) {
             currentState = when (intention) {
                 is Intention.UserClickedGetUser -> {
-                    launch {
-                        userProfileSdk.startFlow { result ->
-                            send(
-                                Intention.ResultReceived(result)
-                            )
-                        }
+                    userProfileSdk.startFlow { result ->
+                        send(
+                            Intention.ResultReceived(result)
+                        )
                     }
 
                     currentState.copy(

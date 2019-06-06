@@ -30,6 +30,7 @@ class UserProfileStateRepo(
 
             currentState = when (intention) {
                 is Intention.Start -> {
+                    logger.log("Sending start intention to coordinator")
                     coordinator.send(
                         Coordinator.Intention.Start
                     )
