@@ -48,6 +48,10 @@ android {
 // Dev Dependencies
 dependencies {
     devImplementation project(Projects.builderDev)
+
+    devImplementation Libs.okHttp3
+    devImplementation Libs.okHttp3LoggingInterceptor
+
     devImplementation(Libs.chuck) {
         exclude group: 'com.android.support', module: 'design'
     }
@@ -67,8 +71,8 @@ dependencies {
     implementation Libs.supportConstraintLayout
     implementation Libs.supportDesign
 
-    implementation Libs.okHttp3
-    implementation Libs.okHttp3LoggingInterceptor
+    implementation Libs.archComponentViewModel
+    implementation Libs.archComponentLifecycleExtensions
 
     testImplementation TestLibs.jUnit
     testImplementation TestLibs.assertJCore

@@ -1,10 +1,19 @@
 package com.jacksoncheek.userprofile.sample
 
 import com.jacksoncheek.userprofile.builder.UserProfileSdk
+import com.jacksoncheek.userprofile.common.internal.logic.UserProfileDispatchers
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 
 interface Graph {
 
     val userProfileSdk: UserProfileSdk
+
+    val dispatchers: UserProfileDispatchers
+
+    val sdkSessionScope: CoroutineScope
+
+    val viewModelFactory: ViewModelFactory
 
     class Builder {
 
@@ -19,9 +28,21 @@ interface Graph {
                 "`userProfileSdk` cannot be null"
             }
 
+            val dispatchers = UserProfileDispatchers()
+
+            val sdkSessionScope = CoroutineScope(dispatchers.ui + Job())
+
+            val viewModelFactory = ViewModelFactory(
+                scope = sdkSessionScope,
+                userProfileSdk = userProfileSdk!!
+            )
+
             return GraphImpl(
                 GraphImpl.Params(
-                    userProfileSdk = userProfileSdk!!
+                    userProfileSdk = userProfileSdk!!,
+                    dispatchers = dispatchers,
+                    sdkSessionScope = sdkSessionScope,
+                    viewModelFactory = viewModelFactory
                 )
             )
         }
@@ -39,7 +60,22 @@ private class GraphImpl(
         params.userProfileSdk
     }
 
+    override val dispatchers: UserProfileDispatchers by lazy {
+        params.dispatchers
+    }
+
+    override val sdkSessionScope: CoroutineScope by lazy {
+        params.sdkSessionScope
+    }
+
+    override val viewModelFactory: ViewModelFactory by lazy {
+        params.viewModelFactory
+    }
+
     data class Params(
-        val userProfileSdk: UserProfileSdk
+        val userProfileSdk: UserProfileSdk,
+        val dispatchers: UserProfileDispatchers,
+        val sdkSessionScope: CoroutineScope,
+        val viewModelFactory: ViewModelFactory
     )
 }

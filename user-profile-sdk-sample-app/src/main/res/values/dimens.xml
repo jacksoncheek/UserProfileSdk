@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Style Defaults -->
+    <dimen name="app_standard_margin">16dp</dimen>
+    <dimen name="app_standard_padding">16dp</dimen>
+
+    <!-- Density-Independent Sizes -->
+    <dimen name="app_negative_one_and_a_half">12dp</dimen>
+    <dimen name="app_negative_one">8dp</dimen>
+    <dimen name="app_negative_three_quarters">6dp</dimen>
+    <dimen name="app_negative_half">4dp</dimen>
+    <dimen name="app_negative_quarter">2dp</dimen>
+    <dimen name="app_quarter">2dp</dimen>
+    <dimen name="app_half">4dp</dimen>
+    <dimen name="app_three_quarters">6dp</dimen>
+    <dimen name="app_one">8dp</dimen>
+    <dimen name="app_one_and_a_quarter">10dp</dimen>
+    <dimen name="app_one_and_a_half">12dp</dimen>
+    <dimen name="app_two">16dp</dimen>
+    <dimen name="app_two_and_a_half">20dp</dimen>
+    <dimen name="app_three">24dp</dimen>
+    <dimen name="app_four">32dp</dimen>
+    <dimen name="app_five">40dp</dimen>
+    <dimen name="app_five_and_a_half">44dp</dimen>
+    <dimen name="app_six">48dp</dimen>
+    <dimen name="app_six_and_one_quarter">50dp</dimen>
+    <dimen name="app_seven">56dp</dimen>
+    <dimen name="app_eight">64dp</dimen>
+    <dimen name="app_nine">72dp</dimen>
+    <dimen name="app_ten">80dp</dimen>
+    <dimen name="app_eleven">100dp</dimen>
+    <dimen name="app_twelve">150dp</dimen>
+    <dimen name="app_thirteen">200dp</dimen>
+    <dimen name="app_fourteen">250dp</dimen>
+    <dimen name="app_fifteen">350dp</dimen>
+
+    <!-- Scale-Independent Sizes (sp) -->
+    <dimen name="app_negative_one_and_a_half_sp">12sp</dimen>
+    <dimen name="app_negative_one_sp">8sp</dimen>
+    <dimen name="app_negative_three_quarters_sp">6sp</dimen>
+    <dimen name="app_negative_half_sp">4sp</dimen>
+    <dimen name="app_negative_quarter_sp">2sp</dimen>
+    <dimen name="app_quarter_sp">2sp</dimen>
+    <dimen name="app_half_sp">4sp</dimen>
+    <dimen name="app_three_quarters_sp">6sp</dimen>
+    <dimen name="app_one_sp">8sp</dimen>
+    <dimen name="app_one_and_a_quarter_sp">10sp</dimen>
+    <dimen name="app_one_and_a_half_sp">12sp</dimen>
+    <dimen name="app_two_sp">16sp</dimen>
+    <dimen name="app_two_and_a_half_sp">20sp</dimen>
+    <dimen name="app_three_sp">24sp</dimen>
+    <dimen name="app_four_sp">32sp</dimen>
+    <dimen name="app_five_sp">40sp</dimen>
+    <dimen name="app_five_and_a_half_sp">44sp</dimen>
+    <dimen name="app_six_sp">48sp</dimen>
+    <dimen name="app_six_and_one_quarter_sp">50sp</dimen>
+    <dimen name="app_seven_sp">56sp</dimen>
+    <dimen name="app_eight_sp">64sp</dimen>
+    <dimen name="app_nine_sp">72sp</dimen>
+    <dimen name="app_ten_sp">80sp</dimen>
+    <dimen name="app_eleven_sp">100sp</dimen>
+    <dimen name="app_twelve_sp">150sp</dimen>
+    <dimen name="app_thirteen_sp">200sp</dimen>
+    <dimen name="app_fourteen_sp">250sp</dimen>
+    <dimen name="app_fifteen_sp">350sp</dimen>
+
+    <!-- TextViews -->
+    <dimen name="app_default_textview_text_size">16sp</dimen>
+    <dimen name="app_default_textview_small_text_size">12sp</dimen>
+    <dimen name="app_default_textview_title_text_size">40sp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="app_default_button_text_size">16sp</dimen>
+    <dimen name="app_default_button_height">56dp</dimen>
+    <dimen name="app_default_button_elevation">2dp</dimen>
+    <dimen name="app_default_button_elevation_active">8dp</dimen>
+
+</resources>

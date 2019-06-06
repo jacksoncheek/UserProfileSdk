@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">UserProfileSdk</string>
+    <string name="app_name">Hello</string>
+
+    <string name="main_get_profile">Get Profile</string>
 </resources>

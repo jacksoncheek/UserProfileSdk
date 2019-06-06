@@ -14,7 +14,7 @@ interface UserUi {
 
     fun showUserProfile(show: Boolean, user: User?)
 
-    fun enableOkButton(enable: Boolean)
+    fun enableGotItButton(enable: Boolean)
 }
 
 fun UserUi.render(state: UserProfileViewModel.State) {
@@ -26,5 +26,5 @@ fun UserUi.render(state: UserProfileViewModel.State) {
         user = state.user
     )
 
-    enableOkButton(state.enableOkButton)
+    enableGotItButton(state.enableGotItButton)
 }

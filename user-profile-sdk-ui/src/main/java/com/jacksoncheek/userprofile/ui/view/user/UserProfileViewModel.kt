@@ -55,14 +55,20 @@ class UserProfileViewModel(
                         isLoading = false,
                         user = intention.user,
                         userProfileIsAvailable = true,
-                        enableOkButton = true
+                        enableGotItButton = true
                     )
                 }
 
                 is Intention.ErrorReceived -> {
                     launch {
+                        coordinator.send(
+                            Coordinator.Intention.End
+                        )
+                    }
+
+                    launch {
                         val userProfileSdkResult = UserProfileSdkResult.Failure(
-                            error = "Unable to retrieve User."
+                            error = "Oops... Something went wrong!"
                         )
 
                         userProfileStateRepo.send(
@@ -72,18 +78,12 @@ class UserProfileViewModel(
                         )
                     }
 
-                    launch {
-                        coordinator.send(
-                            Coordinator.Intention.End
-                        )
-                    }
-
                     currentState.copy(
                         isLoading = false
                     )
                 }
 
-                is Intention.UserClickedOk -> {
+                is Intention.UserClickedGotIt -> {
                     launch {
                         val userProfileSdkResult = UserProfileSdkResult.Success(
                             userName = "${currentState.user!!.name} ${currentState.user!!.surname}"
@@ -133,7 +133,7 @@ class UserProfileViewModel(
 
     data class State(
         val isLoading: Boolean = true,
-        val enableOkButton: Boolean = false,
+        val enableGotItButton: Boolean = false,
         val user: User? = null,
         val userProfileIsAvailable: Boolean = false
     )
@@ -146,7 +146,7 @@ class UserProfileViewModel(
 
         object ErrorReceived : Intention()
 
-        object UserClickedOk: Intention()
+        object UserClickedGotIt: Intention()
 
         data class StoreActivity(
             val activity: AppCompatActivity

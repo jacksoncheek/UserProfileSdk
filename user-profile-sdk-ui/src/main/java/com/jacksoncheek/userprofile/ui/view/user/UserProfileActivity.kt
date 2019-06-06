@@ -39,7 +39,6 @@ class UserProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_user_profile)
 
         ui.observe(viewModel.scope) { intention -> viewModel.send(intention) }
@@ -128,7 +127,7 @@ class UserProfileActivity : AppCompatActivity() {
             }
         }
 
-        override fun enableOkButton(enable: Boolean) {
+        override fun enableGotItButton(enable: Boolean) {
             gotItButton.isEnabled = enable
         }
 
@@ -141,7 +140,7 @@ class UserProfileActivity : AppCompatActivity() {
 
         private fun setUpListeners() {
             gotItButton.setOnClickListener {
-                notify(UserProfileViewModel.Intention.UserClickedOk)
+                notify(UserProfileViewModel.Intention.UserClickedGotIt)
             }
         }
 
