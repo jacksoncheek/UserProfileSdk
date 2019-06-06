@@ -55,8 +55,8 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         viewModel.scope.coroutineContext[Job]!!.cancel()
+        super.onDestroy()
     }
 
     private inner class Ui(private val activity: UserProfileActivity) : UserUi {

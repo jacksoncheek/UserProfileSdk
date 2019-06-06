@@ -1,7 +1,6 @@
 package com.jacksoncheek.userprofile.ui.view
 
 import android.support.v7.app.AppCompatActivity
-import com.jacksoncheek.userprofile.common.result.UserProfileSdkResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.channels.Channel
@@ -25,9 +24,7 @@ class Coordinator(
             when (intention) {
                 is Intention.Start -> {
                     navigator.send(
-                        Navigator.Intention.Start(
-                            callback = intention.callback
-                        )
+                        Navigator.Intention.Start
                     )
                 }
 
@@ -54,9 +51,7 @@ class Coordinator(
 
     sealed class Intention {
 
-        data class Start(
-            val callback: (UserProfileSdkResult) -> Unit
-        ) : Intention()
+        object Start : Intention()
 
         object End : Intention()
 

@@ -60,23 +60,15 @@ class UserProfileViewModel(
                 }
 
                 is Intention.ErrorReceived -> {
-                    launch {
-                        coordinator.send(
-                            Coordinator.Intention.End
-                        )
-                    }
+                    val userProfileSdkResult = UserProfileSdkResult.Failure(
+                        error = "Oops... Something went wrong!"
+                    )
 
-                    launch {
-                        val userProfileSdkResult = UserProfileSdkResult.Failure(
-                            error = "Oops... Something went wrong!"
+                    userProfileStateRepo.send(
+                        UserProfileStateRepo.Intention.End(
+                            userProfileSdkResult
                         )
-
-                        userProfileStateRepo.send(
-                            UserProfileStateRepo.Intention.End(
-                                userProfileSdkResult
-                            )
-                        )
-                    }
+                    )
 
                     currentState.copy(
                         isLoading = false
@@ -84,23 +76,15 @@ class UserProfileViewModel(
                 }
 
                 is Intention.UserClickedGotIt -> {
-                    launch {
-                        val userProfileSdkResult = UserProfileSdkResult.Success(
-                            userName = "${currentState.user!!.name} ${currentState.user!!.surname}"
-                        )
+                    val userProfileSdkResult = UserProfileSdkResult.Success(
+                        userName = "${currentState.user!!.name} ${currentState.user!!.surname}"
+                    )
 
-                        userProfileStateRepo.send(
-                            UserProfileStateRepo.Intention.End(
-                                userProfileSdkResult
-                            )
+                    userProfileStateRepo.send(
+                        UserProfileStateRepo.Intention.End(
+                            userProfileSdkResult
                         )
-                    }
-
-                    launch {
-                        coordinator.send(
-                            Coordinator.Intention.End
-                        )
-                    }
+                    )
 
                     currentState
                 }

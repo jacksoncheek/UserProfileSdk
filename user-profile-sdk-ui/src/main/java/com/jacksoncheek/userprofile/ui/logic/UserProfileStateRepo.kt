@@ -31,9 +31,7 @@ class UserProfileStateRepo(
             currentState = when (intention) {
                 is Intention.Start -> {
                     coordinator.send(
-                        Coordinator.Intention.Start(
-                            callback = intention.callback
-                        )
+                        Coordinator.Intention.Start
                     )
 
                     currentState.copy(
@@ -44,6 +42,10 @@ class UserProfileStateRepo(
 
                 is Intention.End -> {
                     currentState.callback(intention.result)
+
+                    coordinator.send(
+                        Coordinator.Intention.End
+                    )
 
                     currentState.copy(
                         idle = true,

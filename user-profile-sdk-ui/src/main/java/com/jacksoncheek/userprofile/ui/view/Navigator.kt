@@ -3,7 +3,6 @@ package com.jacksoncheek.userprofile.ui.view
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import com.jacksoncheek.userprofile.common.internal.logic.Logger
-import com.jacksoncheek.userprofile.common.result.UserProfileSdkResult
 import com.jacksoncheek.userprofile.common.internal.logic.Result
 import com.jacksoncheek.userprofile.ui.view.user.UserProfileActivity
 import kotlinx.coroutines.CompletableDeferred
@@ -69,9 +68,7 @@ class Navigator(
 
     sealed class Intention {
 
-        data class Start(
-            val callback: (UserProfileSdkResult) -> Unit
-        ) : Intention()
+        object Start : Intention()
 
         object End : Intention()
 
