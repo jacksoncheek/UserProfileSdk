@@ -39,6 +39,11 @@ android {
             applicationIdSuffix ".dev"
         }
 
+        mock {
+            dimension "CONFIGURABLE"
+            applicationIdSuffix ".mock"
+        }
+
         prod {
             dimension "CONFIGURABLE"
         }
@@ -53,6 +58,19 @@ dependencies {
     devImplementation Libs.okHttp3LoggingInterceptor
 
     devImplementation(Libs.chuck) {
+        exclude group: 'com.android.support', module: 'design'
+    }
+}
+
+// Mock Dependencies
+dependencies {
+    mockImplementation project(Projects.builderDev)
+
+    mockImplementation Libs.okHttp3
+    mockImplementation Libs.okHttp3LoggingInterceptor
+    mockImplementation Libs.okHttp3MockWebServer
+
+    mockImplementation(Libs.chuck) {
         exclude group: 'com.android.support', module: 'design'
     }
 }

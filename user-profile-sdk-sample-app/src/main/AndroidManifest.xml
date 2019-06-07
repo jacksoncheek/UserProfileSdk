@@ -11,7 +11,8 @@
             android:icon="@drawable/ic_hello_my_name_is"
             android:label="@string/app_name"
             android:supportsRtl="true"
-            android:theme="@style/HelloMyNameIs.AppTheme">
+            android:theme="@style/HelloMyNameIs.AppTheme"
+            android:usesCleartextTraffic="true">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

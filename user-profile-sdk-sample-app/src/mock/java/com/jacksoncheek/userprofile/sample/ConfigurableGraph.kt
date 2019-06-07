@@ -9,11 +9,15 @@ import com.jacksoncheek.userprofile.common.internal.logic.UserProfileDispatchers
 import com.jacksoncheek.userprofile.common.typealiases.BaseUrl
 import com.jacksoncheek.userprofile.common.typealiases.Region
 import com.readystatesoftware.chuck.ChuckInterceptor
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import okhttp3.mockwebserver.MockWebServer
+import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * A graph for bindings specific to the DEV flavor.
+ * A graph for bindings specific to the MOCK flavor.
  */
 interface ConfigurableGraph {
 
@@ -31,7 +35,10 @@ interface ConfigurableGraph {
 
     private class Impl(private val appContext: Context) : ConfigurableGraph {
 
-        override val baseUrl by lazy { "https://uinames.com" }
+        override val baseUrl: String
+            get() {
+                return "http://localhost:8080"
+            }
 
         override val logger by lazy { AndroidLogger() }
 
@@ -45,6 +52,21 @@ interface ConfigurableGraph {
 
         override val dispatchers by lazy {
             UserProfileDispatchers()
+        }
+
+        private val mockScope: CoroutineScope by lazy {
+            CoroutineScope(dispatchers.io)
+        }
+
+        private val mockDispatcher: MockDispatcher by lazy {
+            MockDispatcher()
+        }
+
+        private val mockWebServer: MockWebServer = MockWebServer().apply {
+            setDispatcher(mockDispatcher)
+            mockScope.launch {
+                start(8080)
+            }
         }
 
         override val userProfileSdk by lazy {
