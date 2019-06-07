@@ -12,7 +12,7 @@ import kotlinx.coroutines.channels.actor
 
 class MainViewModel(
     val scope: CoroutineScope,
-    val userProfileSdk: UserProfileSdk
+    private val userProfileSdk: UserProfileSdk
 ) : ViewModel(), CoroutineScope by scope {
 
     private val stateChannel = ConflatedBroadcastChannel(State())
