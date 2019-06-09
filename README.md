@@ -1,6 +1,6 @@
 # UserProfileSdk
 
-A demo example application to showcase build-aware SDK builders for intelligent Android SDK (library) design.
+A demo application to showcase build-aware SDK builders for better Android SDK (library) design.
 
 ## Awesome Android SDK Design
 ### Leveraging build-aware SDK builders for better library design and keeping your Product Owners happy
