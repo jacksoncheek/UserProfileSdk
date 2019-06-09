@@ -16,4 +16,4 @@ So, how do you design an SDK with all of your **awesome debug tooling** and also
 ![Demo Application](UserProfileSdkDemo.gif)
 
 ## Additional Info
-[Companion blog article (draft)](https://medium.com/@jacksoncheek/intelligent-android-sdk-design-fef427604546)
+[Companion blog article (draft)](https://medium.com/capital-one-tech/awesome-android-sdk-design-fef427604546)
