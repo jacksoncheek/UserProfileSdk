@@ -12,8 +12,8 @@ Testing / Debug code should never be included in shipped Production code.
 
 So, how do you design an SDK with all of your **awesome debug tooling** and also avoid the riskiness of shipping them "turned off" in Production code?
 
+## Blog
+[Companion blog article](https://medium.com/capital-one-tech/awesome-android-sdk-design-fef427604546?sk=e0ddc22f40bfe544aa2b45d83b0c5734)
+
 ## Demo Application
 ![Demo Application](UserProfileSdkDemo.gif)
-
-## Additional Info
-[Companion blog article (draft)](https://medium.com/capital-one-tech/awesome-android-sdk-design-fef427604546)
