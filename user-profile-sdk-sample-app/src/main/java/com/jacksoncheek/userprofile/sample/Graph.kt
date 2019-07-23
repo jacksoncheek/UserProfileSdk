@@ -47,6 +47,10 @@ interface Graph {
             )
         }
     }
+
+    companion object {
+        lateinit var instance: Graph internal set
+    }
 }
 
 /**
@@ -55,6 +59,10 @@ interface Graph {
 private class GraphImpl(
     params: Params
 ) : Graph {
+
+    init {
+        Graph.instance = this
+    }
 
     override val userProfileSdk: UserProfileSdk by lazy {
         params.userProfileSdk
